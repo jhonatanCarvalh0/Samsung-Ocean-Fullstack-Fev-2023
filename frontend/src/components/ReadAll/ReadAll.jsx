@@ -1,5 +1,7 @@
 function ReadAll() {
-    return <div>Read All</div>
+    return <div className="ReadAll">
+        <div className="Card"></div>
+    </div>
 }
 
 export default ReadAll
