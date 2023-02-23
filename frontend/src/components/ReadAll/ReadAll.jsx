@@ -4,7 +4,8 @@ import Card from "../Card/Card";
 // Mock Items (exatamente a mesma estrutura que o back traria)
 // Isso facilita o trabalho aqui no Front, para conseguir estruturar
 // comportamento, sem precisar depender do back para receber dados
-const items = [
+
+const itemsMock = [
   {
     _id: "63ee1e0b18f2b9a93da8435a",
     nome: "Rick Sanchez",
@@ -48,6 +49,19 @@ const items = [
 // inserido dentro delas
 
 function ReadAll() {
+  const items = [];
+
+  // Realiza requisição apra backend obtendo a lista de itens
+  async function realizarRequisicao() {
+    const url = "http:localhost:3000/item";
+    const response = await fetch(url);
+
+    const data = await response.json();
+    console.log(data);
+  }
+
+  realizarRequisicao();
+
   return (
     <div className="ReadAll">
       {items.map(function (item) {

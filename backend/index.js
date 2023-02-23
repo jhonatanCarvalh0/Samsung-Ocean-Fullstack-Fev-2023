@@ -1,5 +1,6 @@
 const express = require("express");
 const { MongoClient, ObjectId } = require("mongodb");
+const cors = require("cors");
 
 //const dbURL = "mongodb://127.0.0.1:27017";
 const dbURL =
@@ -25,6 +26,7 @@ async function main() {
     collection.deleteOne({ _id: new ObjectId(_id) });
 
   const app = express();
+  app.use(cors());
   //Averthing express receive gonna be read as JSON
   app.use(express.json());
   const PORT = 3000;
