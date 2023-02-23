@@ -1,4 +1,4 @@
-.Card {
+.card {
   border: 1px solid white;
   border-radius: 1rem;
   margin: 2rem;
@@ -9,7 +9,7 @@
   font-size: 2rem;
 }
 
-.Card > img {
+.card > img {
   border-radius: 1rem;
   width: 200px;
 }
