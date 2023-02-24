@@ -15,7 +15,7 @@
   width: 200px;
 }
 
-.color-wrapper {
+.tag-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -23,13 +23,13 @@
   justify-content: center;
 }
 
-.color {
-  font-size: 12px;
+.tag {
+  font-size: 15px;
   background: white;
   color: black;
   padding: 0 0.75rem;
   border-radius: 0.5rem;
-  font-weight: bold;
+  font-weight: bolder;
   max-width: 8rem;
   overflow: hidden;
   white-space: nowrap;

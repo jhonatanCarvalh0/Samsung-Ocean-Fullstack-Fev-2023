@@ -58,7 +58,6 @@ function ReadAll() {
     const response = await fetch(url);
 
     const data = await response.json();
-    console.log(data);
     setItems(data);
   }
 
@@ -69,8 +68,6 @@ function ReadAll() {
   return (
     <div className="ReadAll">
       {items.map(function (item) {
-        // console.log(item);
-        // Key -> card-1234
         return <Card key={"card-" + item._id} item={item} />;
       })}
     </div>

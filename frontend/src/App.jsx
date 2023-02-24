@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import ReadAll from "./components/ReadAll/ReadAll";
+import ReadSingle from "./components/ReadSingle/ReadSingle";
 
 /**
  * Desafios!
@@ -23,12 +25,22 @@ import ReadAll from "./components/ReadAll/ReadAll";
  * o card.
  * 6. Utilizando o map, exiba dentro do componente <Card />, uma renderização
  * desse componente <Tag /> recém criado para cada item da lista de tags.
+ *
+ * <ReadSingle id={id} />
+ * <ReadAll />
  */
 
 function App() {
+  const [id, setId] = useState(["63f7a115fef884fcc552f2a5"]);
+
   return (
     <div className="App">
       <Header />
+      <h1>Read by id</h1>
+      <ReadSingle id={id} />
+      <p>Set Id: </p>
+
+      <h1>Read ALL</h1>
       <ReadAll />
     </div>
   );
