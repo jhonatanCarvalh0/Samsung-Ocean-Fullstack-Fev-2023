@@ -7,7 +7,7 @@ function ReadSingle(props) {
   const characterId = props.id;
   // Realiza requisição para backend obtendo a lista de itens
   async function realizarRequisicaoBackend() {
-    const url = `http://localhost:3000/characters/${characterId}`;
+    const url = `https://ocean-jornada-fullstack-fevereiro-2023-6vz7.onrender.com/characters/${characterId}`;
     const response = await fetch(url);
 
     const data = await response.json();
