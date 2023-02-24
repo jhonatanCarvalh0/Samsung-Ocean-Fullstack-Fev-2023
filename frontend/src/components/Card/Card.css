@@ -15,7 +15,7 @@
   width: 200px;
 }
 
-.tag-wrapper {
+.color-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -23,7 +23,7 @@
   justify-content: center;
 }
 
-.tag {
+.color {
   font-size: 12px;
   background: white;
   color: black;

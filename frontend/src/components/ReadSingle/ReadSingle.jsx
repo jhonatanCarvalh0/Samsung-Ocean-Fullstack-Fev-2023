@@ -1,4 +1,4 @@
-import "./ReadAll.css";
+import "./ReadSingle.css";
 import Card from "../Card/Card";
 import { useEffect, useState } from "react";
 
@@ -49,12 +49,12 @@ const itemsMock = [
 // Na verdade, as chaves representam que código JavaScript pode ser
 // inserido dentro delas
 
-function ReadAll() {
+function ReadSingle() {
   const [items, setItems] = useState([]);
 
   // Realiza requisição para backend obtendo a lista de itens
   async function realizarRequisicaoBackend() {
-    const url = "http://localhost:3000/characters";
+    const url = `http://localhost:3000/characters/${characterId}`;
     const response = await fetch(url);
 
     const data = await response.json();
@@ -67,7 +67,7 @@ function ReadAll() {
   }, []);
 
   return (
-    <div className="ReadAll">
+    <div className="ReadSingle">
       {items.map(function (item) {
         // console.log(item);
         // Key -> card-1234

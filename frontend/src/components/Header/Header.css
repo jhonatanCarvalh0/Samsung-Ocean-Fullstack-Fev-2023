@@ -4,6 +4,7 @@
   background: white;
   padding: 1rem;
   align-items: center;
+  width: 100%;
 }
 
 .Header__links {
