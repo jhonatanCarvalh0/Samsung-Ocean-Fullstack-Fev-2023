@@ -14,7 +14,7 @@ function Card(props) {
     }
 
     if (tag === "Light Peach") {
-      return { backgroundColor: "#FFB4E3", color: "#FFFFFF" };
+      return { backgroundColor: "#fce0cb", color: "#000" };
     }
 
     if (tag === "Purple" || tag === "Red" || tag === "Blue") {
@@ -26,7 +26,7 @@ function Card(props) {
     }
 
     if (tag === "White") {
-      return { backgroundColor: tag, color: "black"};
+      return { backgroundColor: tag, color: "black" };
     }
     return { backgroundColor: "black", color: "white" };
   };
