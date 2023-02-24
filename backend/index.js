@@ -29,7 +29,6 @@ async function main() {
   app.use(cors());
   //Averthing express receive gonna be read as JSON
   app.use(express.json());
-  const PORT = 3000;
 
   // CRUD - Itens
   //Endpoint Create - OK
@@ -78,8 +77,9 @@ async function main() {
   });
 
   //port
+  const PORT = process.env.PORT || 3000;
   app.listen(PORT, function () {
-    console.log(`We are listening! Acess: http://localhost:${PORT}`);
+    console.log(`Servidor rodando na porta: ${PORT}`);
   });
 }
 main();
